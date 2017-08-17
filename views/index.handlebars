@@ -1,0 +1,93 @@
+<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12 text-center" id="bun">
+				<h1>EAT DA BURGER!</h1>
+			</div>
+		</div>
+
+
+
+		<div class="row" id="middle">
+			<div class="col-xs-12 text-center">
+				<img src="/assets/images/cheeseburger.png" alt="burger" class="img-responsive center-block">
+			</div>
+		</div>
+
+
+
+		<div class="row" id="middle">
+			<div class="col-xs-5 text-center">
+				<h3>Ordered Burgers</h3>
+				<ul>
+					{{#each burger_data}}
+					{{#unless this.devoured}}
+
+					<li>
+
+						<h5>{{this.id}}. {{this.burger_name}}
+
+							<form method="POST" action="/burgers/devour" class="button-size">
+								<input type = "hidden" name="burger_id" type="text" value={{this.id}}>
+								<br>
+								<button type="submit" class="btn btn-default">DEVOUR IT!</button>
+							</form>
+						</h5>
+					</li>
+
+					{{/unless}}
+					{{/each}}
+
+				</ul>	
+			</div>
+
+
+
+			<div class="col-xs-2"></div>
+
+
+
+			<div class="col-xs-5 text-center">
+				<h3>Devoured Burgers</h3>
+				<ul>
+					{{#each burger_data}}
+					{{#if this.devoured}}
+
+					<li>
+						<h5>{{this.id}}. {{this.burger_name}}</h5>
+					</li>	
+
+					{{/if}}
+					{{/each}}
+
+				</ul>
+			</div>
+		</div>
+
+
+
+
+
+	<div class="row" id="middle">
+		<div class="col-xs-12 text-center">
+			<form action="/burgers/newBurger" method="POST">
+		<input type = "text" name="burger_name"  value="" id="create">
+		<button type="submit" class="btn btn-primary" id="text-enter-button">SUBMIT</button>
+		</form>
+			<p><strong>Type in a burger you would like to eat and click the submit button!</strong></p>
+
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="col-xs-12 text-center" id="bun">
+			<h2>Thanks for dining with us!</h2>
+
+
+		</div>
+	</div>
+
+	</div>
