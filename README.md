@@ -17,5 +17,5 @@ In this assignment, I used the previous week's `Eat-Da-Burger` app and replaced 
 * Removed old ORM file, as well as any references to it in `burgers_controller.js`; Replaced with Sequelize methods
 
 * End product functioned just like end procuct of `Eat-Da-Burger` app
-    ![sequelizedBurger](public/assets/images/sequelizedBurgerscreenshot.jpg) 
+    ![sequelizedBurger](/public/assets/images/sequelizedBurgerscreenshot.PNG) 
 
